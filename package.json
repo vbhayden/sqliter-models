@@ -1,0 +1,21 @@
+{
+  "name": "sqliter",
+  "version": "0.0.1",
+  "description": "Async model-based interface for SQLite3",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Trey Hayden",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  },
+  "dependencies": {
+    "sqlite": "^3.0.3"
+  }
+}
