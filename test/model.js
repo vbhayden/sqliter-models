@@ -1,4 +1,4 @@
-const sqliter = require("../../sqliter/index");
+const sqliter = require("../index");
 const types = sqliter.types;
 
 class TestModel extends sqliter.Model
