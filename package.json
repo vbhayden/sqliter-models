@@ -1,5 +1,5 @@
 {
-  "name": "sqliter",
+  "name": "sqlite-models",
   "version": "0.0.1",
   "description": "Async model-based interface for SQLite3",
   "main": "index.js",
