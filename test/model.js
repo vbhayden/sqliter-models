@@ -17,11 +17,6 @@ class TestModel extends sqliter.Model
 
         this.name = "testModel"
         this.define({
-            id: {
-                name: "id",
-                type: types.AUTO_ID,
-                description: "Auto-ID",
-            },
             string: {
                 name: "string",
                 type: types.TEXT,
