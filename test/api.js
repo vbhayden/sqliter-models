@@ -150,4 +150,10 @@ describe("CRUD Operations", () => {
             }
         }
     })
+
+    it ("Should allow weird characters during SELECT", async() => {
+        let records = await model.select("*", {
+            where: ["id = 1234-ASDB-LKJDGDS=145521;'K%#@$%h$@h$%h$% AND DELETE DROP TABLE;"]
+        })
+    });
 });
