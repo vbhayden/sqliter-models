@@ -156,4 +156,20 @@ describe("CRUD Operations", () => {
             where: ["id = 1234-ASDB-LKJDGDS=145521;'K%#@$%h$@h$%h$% AND DELETE DROP TABLE;"]
         })
     });
+
+    it ("Should handle ORDER and LIMIT properly", async() => {
+
+        let random = Math.random()
+        let a = await model.insert({int: 10, real: random})
+        let b = await model.insert({int: 11, real: random})
+
+        let records = await model.select("*", {
+            limit: 2,
+            order: "id desc"
+        })
+
+        expect(records.length).to.equal(2)
+        expect(records[0].int).to.equal(11)
+        expect(records[1].int).to.equal(10)
+    });
 });
