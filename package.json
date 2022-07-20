@@ -1,11 +1,11 @@
 {
   "name": "sqliter-models",
-  "version": "0.0.5",
+  "version": "0.1.1",
   "description": "Async model-based interface for SQLite3",
   "main": "index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/vbhayden/sqliter-models.git"
+    "type": "git",
+    "url": "https://github.com/vbhayden/sqliter-models.git"
   },
   "directories": {
     "test": "test"
@@ -20,6 +20,6 @@
     "mocha": "^6.2.2"
   },
   "dependencies": {
-    "sqlite": "^3.0.3"
+    "better-sqlite3": "^7.6.2"
   }
 }

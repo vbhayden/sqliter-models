@@ -1,6 +1,6 @@
 const fs = require("fs")
 const chai = require("chai");
-const sqlite = require("sqlite3").verbose()
+const sqlite = require("better-sqlite3");
 
 const expect = chai.expect;
 
@@ -13,7 +13,10 @@ describe("CRUD Operations", () => {
     if (fs.existsSync(dbPath))
         fs.unlinkSync(dbPath)
 
-    const db = new sqlite.Database(dbPath, sqlite.OPEN_READWRITE | sqlite.OPEN_CREATE, err => {if (err) console.error(err)});
+    const db = sqlite(dbPath, {
+        fileMustExist: false,
+        readonly: false
+    });
     const model = new TestModel();
 
     before(async() => {
